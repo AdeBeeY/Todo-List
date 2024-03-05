@@ -2,25 +2,27 @@ const btn = document.querySelector('.js-btn');
 const input = document.querySelector('.js-input');
 const output = document.querySelector('.js-output');
 
-let names = ['John', 'Gift', 'James'];
+let todoList = [
+  'Buy Gas',
+ 'Go to the Cinema', 
+ 'Medical Check-up'
+];
 
 function displayTodoList() {
-  let nameList = '';
-  for (let i = 0; i < names.length; i++) {
-    const name = names[i];
-    const html = `<p>${name}</p>`;
-    nameList += html;
+  let todoTotal = '';
+  for (let i = 0; i < todoList.length; i++) {
+    const todo = todoList[i];
+    const html = `<p>${todo}</p>`;
+    todoTotal += html;
   }
-  output.innerHTML = nameList;
+  output.innerHTML = todoTotal;
 }
 
 displayTodoList();
 
-
 btn.addEventListener('click', () => {
   const item = input.value;
-  names.push(item);
-  console.log(names);
+  todoList.push(item);
 
   input.value = '';
 
