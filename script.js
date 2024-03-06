@@ -26,16 +26,16 @@ function displayTodoList() {
     console.log(name);
     console.log(date);
     const html = `
-        <div style="font-size: 18px">
+        <div class="todoName">
           ${name}
         </div>
-        <div>
+        <div class="dueDate">
           ${date}
         </div>
         <button onclick="
           todoList.splice(${i}, 1);
           displayTodoList();
-        " >
+        " class="delBtn">
           Delete
         </button>
     `;
