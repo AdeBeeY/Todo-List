@@ -26,7 +26,7 @@ function displayTodoList() {
     console.log(name);
     console.log(date);
     const html = `
-        <div>
+        <div style="font-size: 18px">
           ${name}
         </div>
         <div>
